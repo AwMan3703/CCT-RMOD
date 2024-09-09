@@ -2,7 +2,7 @@ How to RMOD
 
 1. Create a server
     > copy RMOD_server.lua on your server
-    > require() it in your server code
+    > put `RMOD_server = require("RMOD_server.lua")` in your server code
     > call RMOD_server.setup("<your-hostname>")
     > then call RMOD_server.start() when you want
       to start the server
