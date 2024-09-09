@@ -3,7 +3,7 @@
 local protocol = "RMOD"
 
 local function lookup(host)
-    local servers = {rednet.lookup(protocol, host)}
+    local servers = {rednet.lookup(protocol, "rmod."..host)}
     local s = servers[1]
     print("Found "..host.." server at #"..s)
     return s
