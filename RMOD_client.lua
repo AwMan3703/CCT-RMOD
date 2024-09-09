@@ -1,4 +1,5 @@
 
+-- DO NOT MODIFY THIS UNLESS YOU KNOW WHAT YOU'RE DOING
 local protocol = "RMOD"
 
 local function lookup(host)

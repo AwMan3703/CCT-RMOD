@@ -1,4 +1,5 @@
 
+-- DO NOT MODIFY THIS UNLESS YOU KNOW WHAT YOU'RE DOING
 local protocol = "RMOD"
 
 local serverAPI = require("serverAPI")
@@ -69,6 +70,6 @@ end
 setup()
 
 return {
-    setup = function(hostname) serverAPI.setup(msgHandler, hostname, protocol) end,
+    setup = function(hostname) serverAPI.setup(msgHandler, "rmod."..hostname, protocol) end,
     start = serverAPI.start,
 }
