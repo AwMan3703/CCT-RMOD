@@ -10,19 +10,6 @@ local module_path = fs.combine(RMOD_path, "%s/%d.lua")
 --RMOD metadata files are saved as "<RMOD_path>/<module_name>/meta.txt"
 local metadata_path = fs.combine(RMOD_path, "%s/meta.txt")
 
---Output utility
-local function colored_print(color, ...)
-    local oldColor = term.getTextColor()
-    term.setTextColor(color)
-    print(...)
-    term.setTextColor(oldColor)
-end
-local function log(str)
-    colored_print(colors.gray, ("[RMOD server] %s"):format(str))
-end
-local function warn(str)
-    colored_print(colors.lightGray, ("[RMOD server] %s"):format(str))
-end
 
 --Utility
 local function removeFileExtension(p) return p:match("(.*)%..+") end
