@@ -57,6 +57,6 @@ end
 setup()
 
 return {
-    setup = function(hostname) serverAPI.setup(msgHandler, "rmod."..hostname, protocol) end,
+    setup = function(hostname) serverAPI.setup(msgHandler, "rmod."..hostname, {protocol}) end,
     start = serverAPI.start,
 }
