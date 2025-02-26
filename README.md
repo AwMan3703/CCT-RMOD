@@ -20,7 +20,7 @@
 
 ## Get the modules from the server in your program
 1. Copy `RMOD_client.lua` on your local machine.
-2. Add `RMOD_client = require("RMOD_client.lua")` to your local code.
+2. Add `RMOD_client = require("RMOD_client")` to your local code.
 3. Call `RMOD_client.get("<hostname>", "<module>")`
 to get your module from the server.
 An additional `"<version>"` parameter can be used to specify the version you want to download - if it's not provided, it will get the latest one.
