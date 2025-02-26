@@ -41,8 +41,8 @@ local function requestModule(hostname, module, version)
         version = version
     }
     local response = sendRequestAndAwaitResponse(serverID, request)
-    if not library then printError("Module could not be obtained"); return nil end
     local library = runModule(response)
+    if not library then printError("Module could not be obtained"); return nil end
 
     if not library then printError("Module could not be run"); return nil
     else return library end
