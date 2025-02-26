@@ -14,7 +14,7 @@ local metadata_path = fs.combine(RMOD_path, "%s/meta.txt")
 --Utility
 local function removeFileExtension(p) return p:match("(.*)%..+") end
 
-local function getMeta(module)
+local function getMetadata(module)
     local path = metadata_path:format(module)
     
     local fh = fs.open(path, "r")
@@ -24,7 +24,7 @@ local function getMeta(module)
     return meta
 end
 
-local function getLatestVersion(module) return getMeta(module).latest_version end
+local function getLatestVersion(module) return getMetadata(module).latest_version end
 
 
 local function msgHandler(_, msg, _)
