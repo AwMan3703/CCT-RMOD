@@ -2,7 +2,7 @@
 
 ## Create a server
 1. Copy `RMOD_server.lua` on your server (requires the `serverAPI` script).
-2. Add `RMOD_server = require("RMOD_server.lua")` to your server code.
+2. Add `RMOD_server = require("RMOD_server")` to your server code.
 3. Call `RMOD_server.setup("<your-hostname>")`.
 4. Finally, call `RMOD_server.start()` when you want to start the server.
 
