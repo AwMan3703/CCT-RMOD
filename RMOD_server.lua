@@ -44,18 +44,6 @@ local function msgHandler(_, msg, _)
 end
 
 
---Setup function - RUN BEFORE ANYTHING ELSE
-local function setup()
-    local modems = { peripheral.find("modem") }
-    if #modems==0 then printError("No modem found"); return nil end
-    for _, m in ipairs(modems) do
-        rednet.open( peripheral.getName(m) )
-    end
-    print("All modems open")
-end
-
-setup()
-
 return {
     setup = function(hostname) serverAPI.setup(msgHandler, "rmod."..hostname, {protocol}) end,
     start = serverAPI.start,
