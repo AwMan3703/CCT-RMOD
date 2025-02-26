@@ -54,7 +54,7 @@ local function getLatestVersion(module)
     return highest
 end
 
-local function setMeta(module, meta)
+local function setMetadata(module, meta)
     local path = metadata_path:format(module)
     
     local fh = fs.open(path, "w")
@@ -62,7 +62,7 @@ local function setMeta(module, meta)
     fh.close()
 end
 
-local function getMeta(module)
+local function getMetadata(module)
     local path = metadata_path:format(module)
     
     local fh = fs.open(path, "r")
@@ -75,7 +75,7 @@ end
 local function updateMeta(module)
     local path = metadata_path:format(module)
     
-    if not fs.exists(path) then setMeta(module, { latest_version = -1 }) end
+    if not fs.exists(path) then setMetadata(module, { latest_version = -1 }) end
     
     local fh = fs.open(path, "w")
     local meta = {
